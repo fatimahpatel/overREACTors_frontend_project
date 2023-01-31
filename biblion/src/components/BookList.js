@@ -2,9 +2,8 @@ import Book from "./Book";
 
 const BookList = ({books}) => {
 
-
     const bookComponents = books.map(book => {
-        return <Book key={book.id} book={book} />
+        return <Book key={book.id} book={book}/>
     })
 
     return (
@@ -13,7 +12,6 @@ const BookList = ({books}) => {
         <hr />
         {bookComponents}
         </>
-
 
      );
 }
