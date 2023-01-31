@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import BookList from '../components/BookList';
 
 const SERVER_URL = "http://localhost:8080"
 
@@ -16,7 +17,10 @@ const BookContainer = () => {
 
     
     return (  
+        <>
         <h1>hello</h1>
+        <BookList books={books}/>
+        </>
     );
 }
  
