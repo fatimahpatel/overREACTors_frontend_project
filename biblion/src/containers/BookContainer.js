@@ -26,10 +26,10 @@ const BookContainer = () => {
         fetch(`${SERVER_URL}/books?genre=${filterParam}`)
         .then(response => response.json())
         .then(response => {
-            setBooks(response)
+            // setBooks(response)
             setFilteredBooks(response)
         })
-    }, []);
+    }, [filterParam]);
 
 
     //Filter Book title
@@ -59,6 +59,10 @@ const BookContainer = () => {
         setFilterParam(event.target.value);
     }
 
+    function handleClearButton() {
+        setFilteredBooks(books);
+    }
+
     const allGenres = books.map((book) => {
         // return <option key={book.id} value={book.id}>{book.genre}</option>
         return book.genre
@@ -66,8 +70,12 @@ const BookContainer = () => {
 
     const uniqueGenres = [...new Set(allGenres)];
     const genreOptions = uniqueGenres.map((genre) => {
-        return <option>{genre}</option>
+        return <option key={genre}>{genre}</option>
     })
+
+    //button
+    // button needs onClick event
+    // set
 
 
     
@@ -88,9 +96,10 @@ const BookContainer = () => {
         <select onChange={handleFilter}
                 className="custom-select"
                 aria-label="Filter Books By Genre">
-                <option disabled-value="select-genre">Select s genre</option>
+                <option disabled-value="select-genre">Select a genre</option>
                 {genreOptions}       
         </select>
+        <button onClick={handleClearButton}>clear</button>
         </div>
 
         {/*Search bar*/}
