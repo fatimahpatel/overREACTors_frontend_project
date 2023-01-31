@@ -31,9 +31,7 @@ const BookContainer = () => {
         })
     }, []);
 
-    console.log(filteredBooks);
 
-    
     //Filter Book title
     useEffect(() => {
         const foundBooks = books.filter((book) => {
@@ -61,6 +59,19 @@ const BookContainer = () => {
         setFilterParam(event.target.value);
     }
 
+    const allGenres = books.map((book) => {
+        // return <option key={book.id} value={book.id}>{book.genre}</option>
+        return book.genre
+    })
+
+    const uniqueGenres = [...new Set(allGenres)];
+    const genreOptions = uniqueGenres.map((genre) => {
+        return <option>{genre}</option>
+    })
+
+
+    
+
 
     // const filterBooks = (searchTerm) => {
     //     const foundBooks = books.filter(book => {
@@ -77,8 +88,8 @@ const BookContainer = () => {
         <select onChange={handleFilter}
                 className="custom-select"
                 aria-label="Filter Books By Genre">
-                    <option value="All">Filter By Genre</option>
-                    <option value="Romance">Romance</option>
+                <option disabled-value="select-genre">Select s genre</option>
+                {genreOptions}       
         </select>
         </div>
 
