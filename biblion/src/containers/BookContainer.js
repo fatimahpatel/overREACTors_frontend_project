@@ -18,7 +18,6 @@ const BookContainer = () => {
     
     return (  
         <>
-        <h1>hello</h1>
         <BookList books={books}/>
         </>
     );

@@ -1,7 +1,15 @@
 
-const Book = () => {
+const Book = ({book}) => {
     return ( 
-        <h1>hello</h1>
+        <div className="book">
+            <p>Title: {book.title}</p>
+            {/* <p>Author: {book.author}</p> */}
+            <p>Genre: {book.genre}</p>
+            <p>Age rating: {book.ageRating}</p>
+            <hr/>
+
+
+        </div>
     );
 }
  
