@@ -5,7 +5,6 @@ const SERVER_URL = "http://localhost:8080"
 
 const BookContainer = () => {
 
-    const [searchParam] = useState(["author", "genre", "title"]);
     const [filteredBooks, setFilteredBooks] = useState([]);
     const [filterParam, setFilterParam] = useState(["All"]);
     const [query, setQuery] = useState("");
@@ -21,8 +20,21 @@ const BookContainer = () => {
         })
     }, []);
 
+
+
+    useEffect(() => {
+        fetch(`${SERVER_URL}/books?genre=${filterParam}`)
+        .then(response => response.json())
+        .then(response => {
+            setBooks(response)
+            setFilteredBooks(response)
+        })
+    }, []);
+
+    console.log(filteredBooks);
+
     
-    //Filter books
+    //Filter Book title
     useEffect(() => {
         const foundBooks = books.filter((book) => {
             return book.title.toLowerCase().indexOf(query.toLowerCase()) > -1;
@@ -31,6 +43,7 @@ const BookContainer = () => {
         setFilteredBooks(foundBooks);
     }, [query]) //query is the state that changes
 
+    //Filter book author
     useEffect(() => {
         const foundAuthor = books.filter((book) => {
             return book.author.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
@@ -42,6 +55,10 @@ const BookContainer = () => {
 
     function handleChange(event) {
         setQuery(event.target.value);
+    }
+
+    function handleFilter(event) {
+        setFilterParam(event.target.value);
     }
 
 
@@ -56,16 +73,14 @@ const BookContainer = () => {
     return (  
         <>
         <h1>Biblion</h1>
-        {/* <div className="dropdown">
-        <select onChange={(e) => {
-                setFilterParam(e.target.value);
-                    }}
+        <div className="dropdown">
+        <select onChange={handleFilter}
                 className="custom-select"
                 aria-label="Filter Books By Genre">
                     <option value="All">Filter By Genre</option>
                     <option value="Romance">Romance</option>
         </select>
-        </div> */}
+        </div>
 
         {/*Search bar*/}
         <div className="wrapper">
