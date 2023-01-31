@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
-import Search from '../components/Search';
 
 const SERVER_URL = "http://localhost:8080"
 
@@ -27,9 +26,18 @@ const BookContainer = () => {
     useEffect(() => {
         const foundBooks = books.filter((book) => {
             return book.title.toLowerCase().indexOf(query.toLowerCase()) > -1;
+            
         })
         setFilteredBooks(foundBooks);
     }, [query]) //query is the state that changes
+
+    useEffect(() => {
+        const foundAuthor = books.filter((book) => {
+            return book.author.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
+            
+        })
+        setFilteredBooks(foundAuthor);
+    }, [query])
 
 
     function handleChange(event) {
