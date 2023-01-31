@@ -1,6 +1,8 @@
+import Review from "./Review";
 
 const Book = ({book}) => {
     const reviews = book.reviews.map((review) => {
+        // return <Review key={review.id} review={review}/>
         return <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
     })
     return ( 
