@@ -1,11 +1,7 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
-import Contact from '../components/Contact';
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import ReviewForm from "../components/ReviewForm";
-
-const SERVER_URL = "http://localhost:8080"
+export const SERVER_URL = "http://localhost:8080"
 
 const BookContainer = () => {
 
@@ -40,7 +36,6 @@ const BookContainer = () => {
     useEffect(() => {
         const foundBooks = books.filter((book) => {
             return book.title.toLowerCase().indexOf(query.toLowerCase()) > -1;
-
             
         })
         setFilteredBooks(foundBooks);
@@ -78,42 +73,11 @@ const BookContainer = () => {
         return <option key={genre}>{genre}</option>
     })
 
-    //button
-    // button needs onClick event
-    // set
-
-
-    
-
-
-    // const filterBooks = (searchTerm) => {
-    //     const foundBooks = books.filter(book => {
-    //       return book.genre.toLowerCase().includes(searchTerm.toLowerCase())
-    //     })
-    //     setFilteredBooks(foundBooks);
-    //   }
 
 
     return (  
         <>
-        <div className='navbar'>
-        <BrowserRouter>
-            <div>
-                <ul>
-                    <li> <Link to="/all-books">All Books</Link> </li>
-                    <li> <Link to="/add-review">Add Review</Link> </li>
-                    <li> <Link to="/contact">Contact Us</Link> </li>
-                </ul>
-                <Routes>
-                    <Route path="/all-books" element={<BookList books={books} />} />
-                    <Route path="/add-review" element={<ReviewForm />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
-
-            </div>
-        </BrowserRouter>
-
-        </div>
+        <h1>Biblion</h1>
         <div className="dropdown">
         <select onChange={handleFilter}
                 className="custom-select"
@@ -141,6 +105,7 @@ const BookContainer = () => {
                     </div></div>
 
         <BookList books={filteredBooks}/>
+
         </>
     );
 }
