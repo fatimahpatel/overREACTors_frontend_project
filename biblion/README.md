@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Biblion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to Biblion!
+
+This is a front-end application designed by the OverREACTors, where
+
+front-end application developed by the OverREACTors, using the Online Bookshelf API.
 
 ## Available Scripts
 
