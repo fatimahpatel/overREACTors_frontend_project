@@ -3,7 +3,7 @@ import { SERVER_URL } from "./BookContainer";
 import { UserContext } from "../App";
 import { createContext } from "react";
 
-const HeaderContainer = ({books}) => {
+const HeaderContainer = () => {
 
     const [user, setUser] = useContext(UserContext)
 
@@ -56,8 +56,6 @@ const HeaderContainer = ({books}) => {
             <button 
             type = "submit">Login
             </button>
-            <button
-            type ="submit">Logout</button>
             </form>
             <p>{error}</p>
          </>   
