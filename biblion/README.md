@@ -1,6 +1,8 @@
-# Biblion
+# Biblion - Online Bookshelf Front-End
 
-## Welcome to Biblion!
+## Project summary
+
+Biblion is a React application built by Rebecca, Fatimah, and Isabel, otherwise known as the `OverREACtors`. The API for this project was planned and built by Amy, Nadia and Bav from `merge no-conflict' for the server-side project.
 
 This is a front-end application designed by the OverREACTors, where
 
