@@ -17,5 +17,5 @@ The client can then filter for books by their title (using a search bar) or genr
 
 For the extensions, we aimed to implement the following:
 
-- A Log-in section, where the user can input their details and the front-end extracts data of the reader with matching details.
-- An 'Add Review' section, where the user can write and submit their own reviews for their chosen book. This updates the API and the app displays the updated reviews section under the chosen book.
+- A Log-in section, where the user can input their details to be matched against the existing user database. If the details matched, the user information is stored and used across the app.
+- An 'Add Review' section, where the user can write and submit their own reviews for their chosen book. This updates the API and the app displays the updated review.
