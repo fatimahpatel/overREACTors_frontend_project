@@ -2,7 +2,15 @@
 
 ## Project summary
 
-Biblion is a React application built by Rebecca, Fatimah, and Isabel, otherwise known as the `OverREACtors`. The API for this project was planned and built by Amy, Nadia and Bav from `merge no-conflict' for the server-side project.
+Biblion is a React application built by Rebecca, Fatimah, and Isabel, otherwise known as the
+
+### ` OverREACtors`
+
+The API for this project was planned and built by Amy, Nadia and Bav from
+
+### `merge no-conflict`
+
+for the server-side project.
 
 This is a front-end application designed by the OverREACTors, where
 
@@ -26,6 +34,15 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
