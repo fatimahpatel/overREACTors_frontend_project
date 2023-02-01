@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
+import ReviewForm from '../components/ReviewForm';
 
 export const SERVER_URL = "http://localhost:8080"
 
@@ -73,6 +74,20 @@ const BookContainer = () => {
         return <option key={genre}>{genre}</option>
     })
 
+    //Post new review
+    // const postNewReview = (newReview) => {
+    //     fetch(`${SERVER_URL}/reviews`, {
+    //         method: "POST",
+    //         headers: {"Content-Type": "application/json"},
+    //         body: JSON.stringify(newReview),
+    //     })
+
+    //     .then((response) => response.json())
+    //     .then((response) => {
+    //         setreviews([...reviews, response]);
+    //     });
+    // };
+
 
 
     return (  
@@ -105,7 +120,6 @@ const BookContainer = () => {
                     </div></div>
 
         <BookList books={filteredBooks}/>
-
         </>
     );
 }

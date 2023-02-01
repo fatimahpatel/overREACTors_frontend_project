@@ -1,4 +1,5 @@
 import Review from "./Review";
+import ReviewForm from "./ReviewForm";
 
 const Book = ({book}) => {
     const reviewComponents = book.reviews.map((review) => {
@@ -15,6 +16,7 @@ const Book = ({book}) => {
             <ul>
                 {reviewComponents}
             </ul>
+            <ReviewForm />
             <hr/>
 
 
