@@ -22,7 +22,6 @@ const ReviewForm = ({postNewReview}) => {
 
     return ( 
         <form>
-            <h3>Add Review</h3>
             <label>enter your review</label>
             <input type="text" maxlength="10"
             name="descriptiveReview" 

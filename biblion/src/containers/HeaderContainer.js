@@ -44,7 +44,6 @@ const HeaderContainer = () => {
 
     return (
         <>
-        <h1>This is the header</h1>
         {user ? <><p>Hi {user.name}</p> <button type="submit" onClick={() => setUser(null)}>Logout</button></> : (
         <> 
         <form onSubmit = {handleSubmit}>

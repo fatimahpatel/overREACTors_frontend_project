@@ -92,7 +92,6 @@ const BookContainer = () => {
 
     return (  
         <>
-        <h1>Biblion</h1>
         <div className="dropdown">
         <select onChange={handleFilter}
                 className="custom-select"

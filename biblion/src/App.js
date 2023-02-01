@@ -5,7 +5,7 @@ import Home from './components/Home';
 import HeaderContainer from './containers/HeaderContainer';
 import { createContext } from 'react';
 import { useState } from 'react';
-
+import Navibar from './containers/Navibar';
 export const UserContext = createContext(null);
 
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <UserContext.Provider value = {[user, setUser]}>
     <header>
-      <h1>Biblion</h1>
+      <Navibar />
       <HeaderContainer/>
     </header>
     <Home/>
