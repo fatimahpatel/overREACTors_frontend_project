@@ -2,9 +2,20 @@
 
 ## Project summary
 
-Biblion is a React application that allows users to browse and write reviews of their favourite books. The front-end was developed by the **_OverREACTors_**, and was based off the API of the Online Bookshelf built by **_merge no-conflict_**.
+Biblion is a React application that allows users to browse and write reviews of their favourite books. The front-end was developed by the **OverREACTors**, and was based off the API of the Online Bookshelf built by **merge no-conflict**.
 
-OverREACTors: Rebecca, Fatimah, Isabel.
-Merge no-conflict: Amy, Nadia, Bav.
+OverREACTors: _Rebecca, Fatimah, Isabel_
+
+Merge no-conflict: _Amy, Nadia, Bav_
 
 The frontend was built using React (Javascript), CSS and HTML.
+
+## Project Aims
+
+As part of the MVP, we wanted the front-end to fetch all the books and their respective reviews from the backend, and display the information in a format that is readable to the user.
+The client can then filter for books by their title (using a search bar) or genre (using a drop down list).
+
+For the extensions, we aimed to implement the following:
+
+- A Log-in section, where the user can input their details and the front-end extracts data of the reader with matching details.
+- An 'Add Review' section, where the user can write and submit their own reviews. This updates the API and the app displays the updated reviews section under the chosen book.
