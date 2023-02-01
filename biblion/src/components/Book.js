@@ -1,9 +1,9 @@
 import Review from "./Review";
 
 const Book = ({book}) => {
-    const reviews = book.reviews.map((review) => {
-        // return <Review key={review.id} review={review}/>
-        return <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
+    const reviewComponents = book.reviews.map((review) => {
+        // return <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
+        return <Review key={review.id} review={review} />
     })
     return ( 
         <div className="book">
@@ -11,8 +11,9 @@ const Book = ({book}) => {
             <p>Author: {book.author.name}</p>
             <p>Genre: {book.genre}</p>
             <p>Age rating: {book.ageRating}</p>
+            <h3>Reviews</h3>
             <ul>
-                {reviews}
+                {reviewComponents}
             </ul>
             <hr/>
 

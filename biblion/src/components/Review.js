@@ -1,9 +1,12 @@
+
 const Review = ({review}) => {
 
-
-
     return ( 
-        <em>{review.descriptiveReview}</em>
+        <div>
+            <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
+        </div>
+
+                // return <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
      );
 }
  
