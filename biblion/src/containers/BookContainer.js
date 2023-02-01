@@ -36,19 +36,20 @@ const BookContainer = () => {
     useEffect(() => {
         const foundBooks = books.filter((book) => {
             return book.title.toLowerCase().indexOf(query.toLowerCase()) > -1;
+
             
         })
         setFilteredBooks(foundBooks);
     }, [query]) //query is the state that changes
 
     //Filter book author
-    useEffect(() => {
-        const foundAuthor = books.filter((book) => {
-            return book.author.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
+    // useEffect(() => {
+    //     const foundAuthor = books.filter((book) => {
+    //         return book.author.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
             
-        })
-        setFilteredBooks(foundAuthor);
-    }, [query])
+    //     })
+    //     setFilteredBooks(foundAuthor);
+    // }, [query])
 
 
     function handleChange(event) {
