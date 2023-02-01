@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
+import Contact from '../components/Contact';
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ReviewForm from "../components/ReviewForm";
@@ -101,10 +102,12 @@ const BookContainer = () => {
                 <ul>
                     <li> <Link to="/all-books">All Books</Link> </li>
                     <li> <Link to="/add-review">Add Review</Link> </li>
+                    <li> <Link to="/contact">Contact Us</Link> </li>
                 </ul>
                 <Routes>
                     <Route path="/all-books" element={<BookList books={books} />} />
                     <Route path="/add-review" element={<ReviewForm />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
 
             </div>
