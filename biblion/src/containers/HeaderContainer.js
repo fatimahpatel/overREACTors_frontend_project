@@ -1,32 +1,33 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import BookList from "../components/BookList";
-import ReviewForm from "../components/ReviewForm";
-import BookContainer from "./BookContainer";
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import BookList from "../components/BookList";
+// import ReviewForm from "../components/ReviewForm";
 
-import { createContext } from "react";
 
-const HeaderContainer = () => {
+// import { createContext } from "react";
 
-    const readerContext = createContext();
+// const HeaderContainer = ({books}) => {
 
-    // GET request for userId
+//     const readerContext = createContext();
 
-    return (
-        <BrowserRouter>
-            <div>
-                <ul>
-                    <li> <Link to="/all-books">All Books</Link> </li>
-                    <li> <Link to="/add-review">Add Review</Link> </li>
-                </ul>
-                <Routes>
-                    <Route path="/all-books" element={<BookList books={books}/>} />
-                    <Route path="/add-review" element={<ReviewForm addReview={addReview}/>} />
-                </Routes>
+//     // GET request for userId
 
-            </div>
-        </BrowserRouter>
+//     return (
+        
+//         // <BrowserRouter>
+//         //     <div>
+//         //         <ul>
+//         //             <li> <Link to="/all-books">All Books</Link> </li>
+//         //             <li> <Link to="/add-review">Add Review</Link> </li>
+//         //         </ul>
+//         //         <Routes>
+//         //             <Route path="/all-books" element={<BookList books={books} />} />
+//         //             <Route path="/add-review" element={<ReviewForm />} />
+//         //         </Routes>
 
-     );
-}
+//         //     </div>
+//         // </BrowserRouter>
+
+//      );
+// }
  
-export default HeaderContainer;
+// export default HeaderContainer;

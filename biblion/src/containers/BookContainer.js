@@ -1,6 +1,9 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
 
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import ReviewForm from "../components/ReviewForm";
+
 const SERVER_URL = "http://localhost:8080"
 
 const BookContainer = () => {
@@ -92,6 +95,22 @@ const BookContainer = () => {
 
     return (  
         <>
+        <div className='navbar'>
+        <BrowserRouter>
+            <div>
+                <ul>
+                    <li> <Link to="/all-books">All Books</Link> </li>
+                    <li> <Link to="/add-review">Add Review</Link> </li>
+                </ul>
+                <Routes>
+                    <Route path="/all-books" element={<BookList books={books} />} />
+                    <Route path="/add-review" element={<ReviewForm />} />
+                </Routes>
+
+            </div>
+        </BrowserRouter>
+
+        </div>
         <h1>Biblion</h1>
         <div className="dropdown">
         <select onChange={handleFilter}
@@ -120,7 +139,6 @@ const BookContainer = () => {
                     </div></div>
 
         <BookList books={filteredBooks}/>
-
         </>
     );
 }
