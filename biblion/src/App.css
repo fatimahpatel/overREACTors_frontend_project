@@ -1,3 +1,42 @@
 body {
-  background-color: rgb(210, 207, 207);
+  background-color: red;
 }
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 60px! important;
+}
+
+.book-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: rgb(181, 188, 181);
+  padding: 20px;
+  width: 20%;
+  margin: 15px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 530px;
+}
+
+.custom-nav {
+  height: 130px;
+  font-size: 25px;
+}
+
+.biblion-nav {
+  font-size: 35px! important;
+}
+

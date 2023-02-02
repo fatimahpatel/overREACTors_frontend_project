@@ -1,5 +1,6 @@
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Book = ({book}) => {
     const reviewComponents = book.reviews.map((review) => {
@@ -7,7 +8,7 @@ const Book = ({book}) => {
         return <Review key={review.id} review={review} />
     })
     return ( 
-        <div className="book">
+        <div className="book-card">
             <p>Title: {book.title}</p>
             <p>Author: {book.author.name}</p>
             <p>Genre: {book.genre}</p>
@@ -17,9 +18,6 @@ const Book = ({book}) => {
                 {reviewComponents}
             </ul>
             <ReviewForm />
-            <hr/>
-
-
         </div>
     );
 }

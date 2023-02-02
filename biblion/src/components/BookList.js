@@ -10,9 +10,8 @@ const BookList = ({books}) => {
 
     return (
         <>
+        <p>{user ? user.name : ""}</p>
         <h1>List of Books!</h1>
-        <p>hello {user ? user.name : ""}</p>
-        <hr />
         {bookComponents}
         </>
 
