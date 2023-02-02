@@ -12,7 +12,10 @@ const BookList = ({books}) => {
         <>
         <p>{user ? user.name : ""}</p>
         <h1>List of Books!</h1>
+
+        <div className="book-wrapper">
         {bookComponents}
+        </div>
         </>
 
      );

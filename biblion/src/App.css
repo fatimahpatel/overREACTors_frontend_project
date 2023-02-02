@@ -31,6 +31,11 @@ p{
   font-weight: bold;
 }
 
+.book-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .book-card {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -38,7 +43,7 @@ p{
   margin: auto;
   background-color: rgb(181, 188, 181);
   padding: 20px;
-  width: 20%;
+  width: 100%;
   margin: 15px;
   box-sizing: border-box;
   float: left;
@@ -52,6 +57,10 @@ p{
   /* align-items: center; */
   min-height: 500px;
   max-height: 800px;
+}
+
+.book-card img{
+  width: 100%;
 }
 
 .custom-nav {
@@ -72,8 +81,8 @@ p{
 
 .user-name-greeting {
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
+.login-greeting{
+  display: flex;
+}

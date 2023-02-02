@@ -29,7 +29,7 @@ const Book = ({book}) => {
 
     return ( 
         <div className="book-card">
-
+        <div className="book">
             <img src="https://cloudfront.penguin.co.in/wp-content/uploads/2023/01/9780670097838-196x300.jpg" alt="Book cover"/>
             <p>Title: {book.title}</p>
             <p>Author: {book.author.name}</p>
@@ -40,6 +40,7 @@ const Book = ({book}) => {
                 {reviewComponents}
             </ul>
             <ReviewForm postNewReview={postNewReview} bookId = {book.id} />
+        </div>
         </div>
     );
 }
