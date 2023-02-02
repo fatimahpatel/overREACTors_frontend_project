@@ -29,6 +29,8 @@ const Book = ({book}) => {
 
     return ( 
         <div className="book-card">
+
+            <img src="https://cloudfront.penguin.co.in/wp-content/uploads/2023/01/9780670097838-196x300.jpg" alt="Book cover"/>
             <p>Title: {book.title}</p>
             <p>Author: {book.author.name}</p>
             <p>Genre: {book.genre}</p>
