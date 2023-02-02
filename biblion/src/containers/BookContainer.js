@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import BookList from '../components/BookList';
 import ReviewForm from '../components/ReviewForm';
+import { Button } from 'react-bootstrap';
 
 export const SERVER_URL = "http://localhost:8080"
 
@@ -78,12 +79,12 @@ const BookContainer = () => {
         <>
         <div className="dropdown">
         <select onChange={handleFilter}
-                className="custom-select"
+                className="form"
                 aria-label="Filter Books By Genre">
                 <option disabled-value="select-genre">Select a genre</option>
                 {genreOptions}       
         </select>
-        <button onClick={handleClearButton}>clear</button>
+        <Button onClick={handleClearButton} variant="outline-dark">clear</Button>
         </div>
 
         {/*Search bar*/}
@@ -91,10 +92,10 @@ const BookContainer = () => {
                     <div className="search-wrapper">
                         <label htmlFor="search-form">
                             <input
+                                className = "form"
                                 type="search"
                                 name="search-form"
                                 id="search-form"
-                                className="search-input"
                                 placeholder="Search for..."
                                 value={query}
                                 onChange={handleChange}

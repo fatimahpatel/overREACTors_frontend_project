@@ -20,7 +20,9 @@ const ReviewForm = ({postNewReview, bookId}) => {
     return ( 
         <form onSubmit={handleFormSubmit}>
             <label>enter your review</label>
-            <input type="text" maxlength="10"
+            <input 
+            className = "form"
+            type="text" 
             name="descriptiveReview" 
             onChange={(e) => setDescriptiveReview(e.target.value)} 
             value={descriptiveReview} />
