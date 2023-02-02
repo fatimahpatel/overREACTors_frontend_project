@@ -74,22 +74,6 @@ const BookContainer = () => {
         return <option key={genre}>{genre}</option>
     })
 
-    //Post new review
-    // const postNewReview = (newReview) => {
-    //     fetch(`${SERVER_URL}/reviews`, {
-    //         method: "POST",
-    //         headers: {"Content-Type": "application/json"},
-    //         body: JSON.stringify(newReview),
-    //     })
-
-    //     .then((response) => response.json())
-    //     .then((response) => {
-    //         setreviews([...reviews, response]);
-    //     });
-    // };
-
-
-
     return (  
         <>
         <div className="dropdown">

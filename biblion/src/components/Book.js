@@ -1,12 +1,32 @@
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";
 import "bootstrap/dist/css/bootstrap.min.css"
+import { useState } from "react";
+import { SERVER_URL } from "../containers/BookContainer";
 
 const Book = ({book}) => {
-    const reviewComponents = book.reviews.map((review) => {
+
+    const [reviews, setReviews] = useState(book.reviews)
+
+    const reviewComponents = reviews.map((review) => {
         // return <li><em>{review.descriptiveReview}</em> - {review.reader.name}</li>
         return <Review key={review.id} review={review} />
     })
+
+        // Post new review
+        const postNewReview = (newReview) => {
+            fetch(`${SERVER_URL}/reviews`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(newReview),
+            })
+    
+            .then((response) => response.json())
+            .then((response) => {
+                setReviews([...reviews, response]);
+            });
+        };
+
     return ( 
         <div className="book-card">
             <p>Title: {book.title}</p>
@@ -17,7 +37,7 @@ const Book = ({book}) => {
             <ul>
                 {reviewComponents}
             </ul>
-            <ReviewForm />
+            <ReviewForm postNewReview={postNewReview} bookId = {book.id} />
         </div>
     );
 }
