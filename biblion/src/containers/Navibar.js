@@ -9,6 +9,7 @@ import BookList from '../components/BookList';
 import ReviewForm from '../components/ReviewForm';
 import Contact from '../components/Contact';
 import "bootstrap/dist/css/bootstrap.min.css"
+import HeaderContainer from './HeaderContainer';
 
 const Navibar = ({books}) => {
     return (
@@ -26,6 +27,7 @@ const Navibar = ({books}) => {
                         <Nav.Link as={Link} to={"/add-review"} href="#add-review">Add Review</Nav.Link>
                         {/* <Nav.Link as={Link} to={"/login"} href="#login">Login</Nav.Link> */}
                         <Nav.Link as={Link} to={"/contact"} href="#link">Contact</Nav.Link>
+                        <HeaderContainer />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -39,7 +41,6 @@ const Navibar = ({books}) => {
                 {/* <Route path="/login"></Route> */}
                 <Route path="/contact" element={<Contact/>}/>
             </Routes>    
-            
         </div>
         </BrowserRouter>
         </>

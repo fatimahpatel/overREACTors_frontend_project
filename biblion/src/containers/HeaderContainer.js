@@ -47,7 +47,7 @@ const HeaderContainer = () => {
         {user ? <><p>Hi {user.name}</p> <button type="submit" onClick={() => setUser(null)}>Logout</button></> : (
         <> 
         <form onSubmit = {handleSubmit}>
-            <input 
+            <input
             type = "text"
             placeholder = "enter name"
             value = {name}

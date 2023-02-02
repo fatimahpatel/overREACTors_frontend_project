@@ -15,7 +15,6 @@ function App() {
     <UserContext.Provider value = {[user, setUser]}>
     <header>
       <Navibar />
-      <HeaderContainer/>
     </header>
     <Home/>
     <body>
