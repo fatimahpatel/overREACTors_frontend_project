@@ -67,5 +67,10 @@ p{
 .loginform {
   display: flex;
   justify-content: end;
+  padding-left: 10px;
+}
+
+.user-name-greeting {
+  color: white;
 }
 
