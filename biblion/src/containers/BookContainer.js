@@ -99,6 +99,7 @@ const BookContainer = () => {
                                 placeholder="Search for..."
                                 value={query}
                                 onChange={handleChange}
+                                size="40"
                             />
                         </label>
                     </div></div>

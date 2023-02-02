@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../App";
+import { Button } from 'react-bootstrap';
 
 
 
@@ -19,14 +20,14 @@ const ReviewForm = ({postNewReview, bookId}) => {
 
     return ( 
         <form onSubmit={handleFormSubmit}>
-            <label>enter your review</label>
             <input 
             className = "form"
-            type="text" 
+            type="text"
+            placeholder="Enter Your Review" 
             name="descriptiveReview" 
             onChange={(e) => setDescriptiveReview(e.target.value)} 
             value={descriptiveReview} />
-            <button type="submit">Submit</button>
+            <Button type="submit" variant="outline-secondary">Submit</Button>
         </form>
      );
 }

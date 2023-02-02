@@ -6,7 +6,12 @@ import HeaderContainer from './containers/HeaderContainer';
 import { createContext } from 'react';
 import { useState } from 'react';
 import Navibar from './containers/Navibar';
+import Footer from './components/Footer';
+
+
+
 export const UserContext = createContext(null);
+
 
 
 function App() {
@@ -14,7 +19,9 @@ function App() {
 
   const [user, setUser] = useState(null);
   return (
-    <>
+    <div className='page-container'>
+      <div className='content'>
+
     <UserContext.Provider value = {[user, setUser]}>
     <header>
       <Navibar />
@@ -23,12 +30,11 @@ function App() {
     <main>
    {/* <BookContainer /> */}
    </main>
-   <footer> Biblion (c) 2023</footer>
-   
-   </UserContext.Provider>
-
-    
-</>
+   {/* <footer> Biblion (c) 2023</footer> */}
+   </UserContext.Provider> 
+   </div>
+   <Footer />   
+</div>
   );
 }
 
