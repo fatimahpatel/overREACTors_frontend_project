@@ -1,4 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
+import picOne from "./picOne.png";
+import picTwo from "./picTwo.png";
+import picThree from "./picThree.png";
 
 
 
@@ -10,7 +13,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.pexels.com/photos/10252340/pexels-photo-10252340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={picOne}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -21,7 +24,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg"
+            src={picTwo}
             alt="Second slide"
           />
   
@@ -33,7 +36,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.pexels.com/photos/1115692/pexels-photo-1115692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={picThree}
             alt="Third slide"
           />
   
