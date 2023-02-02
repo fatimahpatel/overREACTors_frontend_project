@@ -45,7 +45,7 @@ const HeaderContainer = () => {
     return (
         <>
         {user ? <><p>Hi {user.name}</p> <button type="submit" onClick={() => setUser(null)}>Logout</button></> : (
-        <> 
+        <div className="login"> 
         <form onSubmit = {handleSubmit}>
             <input 
             type = "text"
@@ -57,7 +57,7 @@ const HeaderContainer = () => {
             </button>
             </form>
             <p>{error}</p>
-         </>   
+         </div>   
             )}
         </>
      );

@@ -35,7 +35,7 @@ const Book = ({book}) => {
             <p>Author: {book.author.name}</p>
             <p>Genre: {book.genre}</p>
             <p>Age rating: {book.ageRating}</p>
-            <h3>Reviews</h3>
+            <p>Reviews</p>
             <ul>
                 {reviewComponents}
             </ul>

@@ -2,36 +2,50 @@ body {
   background-color: red;
 }
 
-h1 {
+h1, h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-size: 60px! important;
 }
 
+.contact, footer{
+  text-align:center;
+}
+
+.login{
+  position: absolute;
+  right: 0;
+}
+
+p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
 .book-card {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
-  text-align: center;
-  font-family: arial;
   background-color: rgb(181, 188, 181);
   padding: 20px;
   width: 20%;
   margin: 15px;
   box-sizing: border-box;
   float: left;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
   padding-top: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transition: .4s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   min-height: 530px;
 }
 
 .custom-nav {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   height: 130px;
   font-size: 25px;
 }
