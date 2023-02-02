@@ -45,19 +45,19 @@ const HeaderContainer = () => {
     return (
         <>
         {user ? <><p>Hi {user.name}</p> <button type="submit" onClick={() => setUser(null)}>Logout</button></> : (
-        <> 
+        <div className="login"> 
         <form onSubmit = {handleSubmit}>
-            <input
+            <input className = "form"
             type = "text"
             placeholder = "enter name"
             value = {name}
             onChange = {(e) => setName(e.target.value)}/>
-            <button 
+            <button className = "login-button"
             type = "submit">Login
             </button>
             </form>
             <p>{error}</p>
-         </>   
+         </div>   
             )}
         </>
      );

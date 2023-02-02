@@ -10,17 +10,25 @@ export const UserContext = createContext(null);
 
 
 function App() {
+
+
   const [user, setUser] = useState(null);
   return (
+    <>
     <UserContext.Provider value = {[user, setUser]}>
     <header>
       <Navibar />
     </header>
-    <Home/>
-    <body>
-   <BookContainer />
-   </body>
+    {/* <Home/> */}
+    <main>
+   {/* <BookContainer /> */}
+   </main>
+   <footer> Biblion (c) 2023</footer>
+   
    </UserContext.Provider>
+
+    
+</>
   );
 }
 
