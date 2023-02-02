@@ -1,6 +1,10 @@
 const Contact = () => {
     return (  
-        <h2>Contact Us!</h2>
+        <> 
+        <h2>Contact</h2>
+        <p>contact@biblion.co.uk</p>
+        <p>@biblion</p>
+        </>
     );
 }
  
