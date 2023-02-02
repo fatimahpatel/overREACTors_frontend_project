@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { SERVER_URL } from "./BookContainer";
 import { UserContext } from "../App";
 import { createContext } from "react";
+import { Button } from 'react-bootstrap';
 
 const HeaderContainer = () => {
 
@@ -46,17 +47,17 @@ const HeaderContainer = () => {
         <>
         <div className="user-name-greeting">
         <div className="login"> 
-        {user ? <div className="login-greeting"><p>Hi {user.name}</p> <button type="submit" onClick={() => setUser(null)}>Logout</button></div> : (
+        {user ? <div className="login-greeting"><p class="user-name">Welcome Back {user.name}!</p> <Button type="submit" className = "login-button" onClick={() => setUser(null)} variant="outline-light" >Logout</Button></div> : (
         <>
         <form onSubmit = {handleSubmit}>
-            <input className = "form"
+            <input className = "input-login"
             type = "text"
-            placeholder = "enter name"
+            placeholder = "  Enter Name"
             value = {name}
             onChange = {(e) => setName(e.target.value)}/>
-            <button className = "login-button"
-            type = "submit">Login
-            </button>
+            <Button className = "login-button"
+            type = "submit" variant="outline-light">Login
+            </Button>
             </form>
             <p>{error}</p>
             </>
