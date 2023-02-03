@@ -8,18 +8,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 **Open and run back-end API in IntelliJ:**
 
-  1.	Clone API from GitHub: https://github.com/nadia-dj98/online_bookshelf_group_6
-  2.	Create local database called “bookshelf_api”: 
+  1.	Clone API from GitHub (https://github.com/nadia-dj98/online_bookshelf_group_6):
+        - In Terminal: `git clone git@github.com:nadia-dj98/online_bookshelf_group_6.git`
+  3.	Create local database called “bookshelf_api”: 
          -	In Terminal: `creatdb bookshelf_api`
-  3.	Run on http://localhost:8080
-
+  4.	Download and install IntelliJ
+  5.	Open API in IntelliJ
+  6.	Run API from `OnlineBookshelfApplication` file:
+        -	Check API is running by opening `http://localhost:8080` on your desktop browser.
+       
 **Open and run front-end project in VSCode:** 
 
-  1.	Clone project from GitHub: https://github.com/fatimahpatel/overREACTors_frontend_project
-  2.	Install node modules: 
+  1.	Clone project from GitHub (https://github.com/fatimahpatel/overREACTors_frontend_project)
+        - In Terminal: `git clone git@github.com:fatimahpatel/overREACTors_frontend_project.git`
+  3.	Install node modules: 
         -	In Terminal: `npm i` or `npm install`
-  3.	Run on http://localhost:3000:
+  4.	Download and open VSCode
+  5.	Run React App:
         -	In Terminal: `npm start`
+        -	App should open automatically on browser
+        -	Otherwise check app is running by opening `http://localhost:3000` on your desktop browser
 
 ## Routes
 
