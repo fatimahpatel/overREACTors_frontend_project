@@ -39,7 +39,10 @@ The following allows you to download all of the API requests (Get, Post, Put and
 
 To use:
 
-1. Import 'Bookshelf_API.postman_collection' into Postman: File > Import > Choose Files > 'Bookshelf_API.postman_collection'
+1. Download and open Postman on desktop.
+2. Import `Bookshelf_API.postman_collection`: 
+
+    `File` > `Import` > `Choose Files` > `Bookshelf_API.postman_collection`
 
 
 ## Data 
