@@ -95,6 +95,7 @@ p{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   height: 130px;
   font-size: 25px;
+  padding-bottom: 25px! important;
 }
 
 .biblion-nav {
